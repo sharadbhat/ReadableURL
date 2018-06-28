@@ -1,0 +1,16 @@
+{
+  "name": "readable-url",
+  "version": "1.0.3",
+  "description": "A package to generate readable random phrases to add to a URL.",
+  "main": "readable.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "random",
+    "readable",
+    "url"
+  ],
+  "author": "Sharad Bhat <sharad.mbhat@gmail.com> (https://github.com/sharadbhat)",
+  "license": "MIT"
+}
