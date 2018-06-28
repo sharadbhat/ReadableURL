@@ -1,4 +1,4 @@
-# Readable-url
+# readable-url
 
 An NPM package to generate readable random phrases to add to dynamically generated URLs.
 
@@ -28,7 +28,7 @@ Then, we create an object.
 
 var generator = new readable(); // true and 3 are default values.
 
-// var generator = new readable
+// var generator = new readable(false, 5); // Other options.
 ```
 
 To generate a random phrase,
@@ -37,5 +37,9 @@ var url = generator.generate();
 
 console.log(url); // Prints out 'ForgetfulHarshEgg'
 ```
+
+This can be used to add to the end of a URL.
+
+Example: https://example.com/photos/ForgetfulHarshEgg
 
 For best results, use an integer value of 3, 4, or 5.
