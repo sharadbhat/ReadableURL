@@ -1,4 +1,4 @@
-const fs = require("fs");
+const fs = require('fs');
 const path = require('path');
 
 /**
@@ -7,18 +7,18 @@ const path = require('path');
  */
 function readable(capitalize=true, wordCount=3) {
   if (wordCount < 2) {
-    throw new Error("Minimum value expected: 2");
+    throw new Error('Minimum value expected: 2');
   }
   else if (wordCount > 10) {
-    throw new Error("Maximum value expected: 10");
+    throw new Error('Maximum value expected: 10');
   }
 
   this.capitalize = capitalize;
   this.wordCount = wordCount;
 
-  this.vowels = ["a", "e", "i", "o", "u"];
-  this.adjectives = fs.readFileSync(path.join(__dirname, "words", "adjectives.txt")).toString().split(" ");
-  this.nouns = fs.readFileSync(path.join(__dirname, "words", "nouns.txt")).toString().split(" ");
+  this.vowels = ['a', 'e', 'i', 'o', 'u'];
+  this.adjectives = fs.readFileSync(path.join(__dirname, 'words', 'adjectives.txt')).toString().split(' ');
+  this.nouns = fs.readFileSync(path.join(__dirname, 'words', 'nouns.txt')).toString().split(' ');
 }
 
 /**
@@ -63,22 +63,22 @@ readable.prototype.generate = function () {
         }
       }
       if (isVowel) {
-        wordsList.unshift("an");
+        wordsList.unshift('an');
       }
       else {
-        wordsList.unshift(["a", "the"][Math.floor(Math.random() * 2)]);
+        wordsList.unshift(['a', 'the'][Math.floor(Math.random() * 2)]);
       }
     }
 
     if (this.wordCount > 4) {
-      wordsList.splice(2, 0, "and");
+      wordsList.splice(2, 0, 'and');
     }
   }
 
   if (this.capitalize) {
     wordsList = this.convertToTitleCase(wordsList);
   }
-  return wordsList.join("");
+  return wordsList.join('');
 }
 
 module.exports = readable;
