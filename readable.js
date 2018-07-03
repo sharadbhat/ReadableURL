@@ -1,4 +1,5 @@
 const fs = require("fs");
+const path = require('path');
 
 /**
  * Initializes the object.
@@ -16,8 +17,8 @@ function readable(capitalize=true, wordCount=3) {
   this.wordCount = wordCount;
 
   this.vowels = ["a", "e", "i", "o", "u"];
-  this.adjectives = fs.readFileSync(__dirname + "\\words\\adjectives.txt").toString().split(" ");
-  this.nouns = fs.readFileSync(__dirname + "\\words\\nouns.txt").toString().split(" ");
+  this.adjectives = fs.readFileSync(path.join(__dirname, "words", "adjectives.txt")).toString().split(" ");
+  this.nouns = fs.readFileSync(path.join(__dirname, "words", "nouns.txt")).toString().split(" ");
 }
 
 /**
