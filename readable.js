@@ -3,9 +3,11 @@ const path = require('path');
 
 /**
  * Initializes the object.
- * @param {boolean} capitalize - If set to true, returns string in CamelCase.
+ * @param {boolean} [capitalize=true] - If set to true, returns string in CamelCase.
+ * @param {number} [wordCount=3] - The number of words to use in the URL.
+ * @param {string} [seperator=''] - The word seperator.
  */
-function readable(capitalize=true, wordCount=3) {
+function readable(capitalize=true, wordCount=3, seperator='') {
   if (wordCount < 2) {
     throw new Error('Minimum value expected: 2');
   }
@@ -15,6 +17,7 @@ function readable(capitalize=true, wordCount=3) {
 
   this.capitalize = capitalize;
   this.wordCount = wordCount;
+  this.seperator = seperator
 
   this.vowels = ['a', 'e', 'i', 'o', 'u'];
   this.adjectives = fs.readFileSync(path.join(__dirname, 'words', 'adjectives.txt')).toString().split(' ');
@@ -78,7 +81,7 @@ readable.prototype.generate = function () {
   if (this.capitalize) {
     wordsList = this.convertToTitleCase(wordsList);
   }
-  return wordsList.join('');
+  return wordsList.join(this.seperator);
 }
 
 module.exports = readable;
