@@ -1,6 +1,6 @@
 {
   "name": "readable-url",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A package to generate readable random phrases to add to a URL.",
   "main": "readable.js",
   "scripts": {
