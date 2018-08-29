@@ -22,7 +22,7 @@ const readable = require("readable-url");
 
 Then, we create an object.
 ```js
-// Takes 2 parameters.
+// Takes 3 parameters.
 // 1. A boolean value - If true, returns string in CamelCase, else lowercase.
 // 2. An integer value - The number of words to be generated in the string. (Between 2 and 10).
 // 3. A string - The seperator between the words.
