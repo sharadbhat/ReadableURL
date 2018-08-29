@@ -16,5 +16,8 @@
     "url"
   ],
   "author": "Sharad Bhat <sharad.mbhat@gmail.com> (https://github.com/sharadbhat)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "npm": "^6.4.0"
+  }
 }
