@@ -1,6 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 
+const adjectives = require('./words/adjective.json')
+const nouns = require('./words/nouns.json')
+
 /**
  * Initializes the object.
  * @param {boolean} [capitalize=true] - If set to true, returns string in CamelCase.
@@ -20,8 +23,8 @@ function readable(capitalize=true, wordCount=3, seperator='') {
   this.seperator = seperator
 
   this.vowels = ['a', 'e', 'i', 'o', 'u'];
-  this.adjectives = fs.readFileSync(path.join(__dirname, 'words', 'adjectives.txt')).toString().split(' ');
-  this.nouns = fs.readFileSync(path.join(__dirname, 'words', 'nouns.txt')).toString().split(' ');
+  this.adjectives = [...adjectives];
+  this.nouns = [...nouns];
 }
 
 /**
