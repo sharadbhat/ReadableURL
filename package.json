@@ -17,7 +17,5 @@
   ],
   "author": "Sharad Bhat <sharad.mbhat@gmail.com> (https://github.com/sharadbhat)",
   "license": "MIT",
-  "dependencies": {
-    "npm": "^6.4.0"
-  }
+  "dependencies": {}
 }
