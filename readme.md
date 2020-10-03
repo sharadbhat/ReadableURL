@@ -8,19 +8,24 @@ To generate readable URLs like Twitch's clips.
 
 Example: https://clips.twitch.tv/WiseAcceptableSnoodPupper
 
-### Get started
+## Get started
+
 To install,
+
 ```sh
 npm install readable-url
 ```
 
-### Usage Instructions
+## Usage Instructions
+
 To use the package, first require it.
+
 ```js
 const readable = require("readable-url");
 ```
 
 Then, we create an object.
+
 ```js
 // Takes 3 parameters.
 // 1. A boolean value - If true, returns string in CamelCase, else lowercase.
@@ -33,6 +38,7 @@ var generator = new readable(); // true, 3 and '' are the default values.
 ```
 
 To generate a random phrase,
+
 ```js
 var url = generator.generate();
 
