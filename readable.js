@@ -1,6 +1,3 @@
-const fs = require('fs');
-const path = require('path');
-
 const adjectives = require('./words/adjective.json')
 const nouns = require('./words/nouns.json')
 
